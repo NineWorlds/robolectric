@@ -21,5 +21,10 @@ public class ShadowPreferenceManager {
     ShadowApplication shadowApplication = shadowOf((Application) context.getApplicationContext());
     return new TestSharedPreferences(shadowApplication.getSharedPreferenceMap(), "__default__", Context.MODE_PRIVATE);
   }
+  
+  @Implementation
+  public static void setDefaultValues(Context context, int resourceId, boolean readAgain) {
+	  
+  }
 
 }
